@@ -1,6 +1,7 @@
 services:
   vmstack:
     image: ghcr.io/vmstack-io/vmstack:latest
+    platform: linux/amd64
     container_name: vmstack
     restart: unless-stopped
     env_file: .env
