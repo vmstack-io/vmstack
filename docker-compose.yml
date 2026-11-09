@@ -1,0 +1,13 @@
+services:
+  vmstack:
+    image: ghcr.io/vmstack-io/vmstack:latest
+    container_name: vmstack
+    restart: unless-stopped
+    env_file: .env
+    ports:
+      - "8080:8080"
+    volumes:
+      - vmstack-data:/data
+
+volumes:
+  vmstack-data:
